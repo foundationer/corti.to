@@ -1,0 +1,8 @@
+
+type Link @model {
+  id: ID! @isUnique
+  hash: String!
+  url: String!
+  description: String
+}
+
