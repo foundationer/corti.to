@@ -8,11 +8,10 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const gc_link = new HttpLink( { uri:'https://api.graph.cool/simple/v1/cjitgitwv1vgm01892qi3gzez' });
 
 const client = new ApolloClient({
-    link: new HttpLink('https://api.graph.cool/simple/v1/cjitgitwv1vgm01892qi3gzez'),
+    link: gc_link,
     cache: new InMemoryCache(),
 });
 
@@ -24,3 +23,4 @@ ReactDOM.render(
     withApolloProvider(<App />),
     document.getElementById('root'));
 
+registerServiceWorker();
