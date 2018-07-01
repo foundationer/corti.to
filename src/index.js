@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AppRouter from './AppRouter';
 import registerServiceWorker from './registerServiceWorker';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
@@ -43,7 +43,7 @@ const withApolloProvider = Comp => (
 );
 
 ReactDOM.render(
-    withApolloProvider(<App />),
+    withApolloProvider(<AppRouter />),
     document.getElementById('root'));
 
 registerServiceWorker();
