@@ -18,15 +18,17 @@ const LINKS_SUBSCRIPTION = gql`
 `;
 
 const ALL_LINKS_QUERY = gql`
-    query AllLinksQuery {
-        allLinks {
-            id
-            url
-            description
-            hash
-        }
-    }
-`;
+  query AllLinksQuery {
+    allLinks {
+      id
+      url
+      description
+      hash
+      stats {
+        clicks
+      }
+  }
+}`;
 
 class LinkList extends Component {
     render() {
