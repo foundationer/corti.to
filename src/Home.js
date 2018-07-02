@@ -1,4 +1,4 @@
-require ('newrelic');
+//require ('newrelic');
 import React, { Component } from 'react';
 import LinkList from './components/LinkList';
 import CreateShortLink from './components/CreateShortLink';
